@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Site do Zero — Curso</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: white;
+}
+
+header {
+    background: #111827;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #273044;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c5cff;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    padding: 80px 7%;
+    background: linear-gradient(135deg, #111827, #17112e);
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #8b5cf6;
+}
+
+.hero p {
+    color: #b7c0d4;
+    font-size: 18px;
+    max-width: 650px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #7c5cff;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #6948ee;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    color: #9ca8bd;
+    margin-bottom: 30px;
+}
+
+.progress-box {
+    background: #111827;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #273044;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #252d3d;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #7c5cff;
+    transition: 0.3s;
+}
+
+.module {
+    background: #111827;
+    border: 1px solid #273044;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.module-header {
+    padding: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-header:hover {
+    background: #161e2d;
+}
+
+.module-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.lessons {
+    display: none;
+    border-top: 1px solid #273044;
+}
+
+.lesson {
+    padding: 18px 22px;
+    border-bottom: 1px solid #20293a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson:last-child {
+    border-bottom: none;
+}
+
+.lesson-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.lesson-info span {
+    color: #8f9bb0;
+    font-size: 14px;
+}
+
+.check {
+    background: #20293a;
+    color: #aaa;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.check.done {
+    background: #16a34a;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #273044;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #9ca8bd;
+    line-height: 1.5;
+}
+
+.final {
+    text-align: center;
+    background: linear-gradient(135deg, #17112e, #111827);
+    border-radius: 20px;
+    padding: 60px 20px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #778197;
+    border-top: 1px solid #273044;
+}
+
+@media (max-width: 800px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .lesson {
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚀 Site do Zero</div>
+
+    <nav>
+        <a href="#curso">Curso</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+
+        <h1>
+            Aprenda a criar seu
+            <span>primeiro site</span>
+            do zero
+        </h1>
+
+        <p>
+            Um curso passo a passo para você aprender HTML,
+            CSS e JavaScript e criar seu próprio site,
+            mesmo começando do zero.
+        </p>
+
+        <a href="#modulos" class="btn">
+            Começar o curso 🚀
+        </a>
+
+    </div>
+</section>
+
+<section id="curso">
+    <div class="container">
+
+        <h2 class="section-title">Seu progresso</h2>
+        <p class="section-subtitle">
+            Marque as aulas concluídas para acompanhar seu progresso.
+        </p>
+
+        <div class="progress-box">
+
+            <strong>
+                Progresso: <span id="progressText">0%</span>
+            </strong>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>HTML</h3>
+                <p>
+                    Aprenda a criar a estrutura das páginas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+                <p>
+                    Aprenda a deixar seu site bonito e responsivo.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>
+                    Adicione interatividade e funções ao seu site.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="modulos">
+
+<div class="container">
+
+<h2 class="section-title">Conteúdo do curso</h2>
+
+<p class="section-subtitle">
+Aprenda passo a passo.
+</p>
+
+
+<!-- MÓDULO 1 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+    <span class="module-title">
+        📚 Módulo 1 — Começando do zero
+    </span>
+    <span>▼</span>
+</div>
+
+<div class="lessons">
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 1 — O que é um site?</strong>
+<span>5 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 2 — HTML, CSS e JavaScript</strong>
+<span>8 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 3 — Preparando seu ambiente</strong>
+<span>10 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+</div>
+</div>
+
+
+<!-- MÓDULO 2 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+<span class="module-title">
+💻 Módulo 2 — Criando seu primeiro site
+</span>
+<span>▼</span>
+</div>
+
+<div class="lessons">
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 4 — Criando o HTML</strong>
+<span>12 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 5 — Textos, imagens e links</strong>
+<span>15 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 6 — Criando botões</strong>
+<span>10 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+</div>
+</div>
+
+
+<!-- MÓDULO 3 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+<span class="module-title">
+🎨 Módulo 3 — Deixando o site bonito
+</span>
+<span>▼</<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Site do Zero — Curso</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: white;
+}
+
+header {
+    background: #111827;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #273044;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c5cff;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    padding: 80px 7%;
+    background: linear-gradient(135deg, #111827, #17112e);
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #8b5cf6;
+}
+
+.hero p {
+    color: #b7c0d4;
+    font-size: 18px;
+    max-width: 650px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #7c5cff;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #6948ee;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    color: #9ca8bd;
+    margin-bottom: 30px;
+}
+
+.progress-box {
+    background: #111827;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #273044;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #252d3d;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #7c5cff;
+    transition: 0.3s;
+}
+
+.module {
+    background: #111827;
+    border: 1px solid #273044;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.module-header {
+    padding: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-header:hover {
+    background: #161e2d;
+}
+
+.module-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.lessons {
+    display: none;
+    border-top: 1px solid #273044;
+}
+
+.lesson {
+    padding: 18px 22px;
+    border-bottom: 1px solid #20293a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson:last-child {
+    border-bottom: none;
+}
+
+.lesson-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.lesson-info span {
+    color: #8f9bb0;
+    font-size: 14px;
+}
+
+.check {
+    background: #20293a;
+    color: #aaa;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.check.done {
+    background: #16a34a;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #273044;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #9ca8bd;
+    line-height: 1.5;
+}
+
+.final {
+    text-align: center;
+    background: linear-gradient(135deg, #17112e, #111827);
+    border-radius: 20px;
+    padding: 60px 20px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #778197;
+    border-top: 1px solid #273044;
+}
+
+@media (max-width: 800px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .lesson {
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚀 Site do Zero</div>
+
+    <nav>
+        <a href="#curso">Curso</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+
+        <h1>
+            Aprenda a criar seu
+            <span>primeiro site</span>
+            do zero
+        </h1>
+
+        <p>
+            Um curso passo a passo para você aprender HTML,
+            CSS e JavaScript e criar seu próprio site,
+            mesmo começando do zero.
+        </p>
+
+        <a href="#modulos" class="btn">
+            Começar o curso 🚀
+        </a>
+
+    </div>
+</section>
+
+<section id="curso">
+    <div class="container">
+
+        <h2 class="section-title">Seu progresso</h2>
+        <p class="section-subtitle">
+            Marque as aulas concluídas para acompanhar seu progresso.
+        </p>
+
+        <div class="progress-box">
+
+            <strong>
+                Progresso: <span id="progressText">0%</span>
+            </strong>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>HTML</h3>
+                <p>
+                    Aprenda a criar a estrutura das páginas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+                <p>
+                    Aprenda a deixar seu site bonito e responsivo.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>
+                    Adicione interatividade e funções ao seu site.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="modulos">
+
+<div class="container">
+
+<h2 class="section-title">Conteúdo do curso</h2>
+
+<p class="section-subtitle">
+Aprenda passo a passo.
+</p>
+
+
+<!-- MÓDULO 1 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+    <span class="module-title">
+        📚 Módulo 1 — Começando do zero
+    </span>
+    <span>▼</span>
+</div>
+
+<div class="lessons">
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 1 — O que é um site?</strong>
+<span>5 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 2 — HTML, CSS e JavaScript</strong>
+<span>8 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 3 — Preparando seu ambiente</strong>
+<span>10 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+</div>
+</div>
+
+
+<!-- MÓDULO 2 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+<span class="module-title">
+💻 Módulo 2 — Criando seu primeiro site
+</span>
+<span>▼</span>
+</div>
+
+<div class="lessons">
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 4 — Criando o HTML</strong>
+<span>12 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 5 — Textos, imagens e links</strong>
+<span>15 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 6 — Criando botões</strong>
+<span>10 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+</div>
+</div>
+
+
+<!-- MÓDULO 3 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+<span class="module-title">
+🎨 Módulo 3 — Deixando o site bonito
+</span>
+<span>▼</<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Site do Zero — Curso</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: white;
+}
+
+header {
+    background: #111827;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #273044;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c5cff;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    padding: 80px 7%;
+    background: linear-gradient(135deg, #111827, #17112e);
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #8b5cf6;
+}
+
+.hero p {
+    color: #b7c0d4;
+    font-size: 18px;
+    max-width: 650px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #7c5cff;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #6948ee;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    color: #9ca8bd;
+    margin-bottom: 30px;
+}
+
+.progress-box {
+    background: #111827;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #273044;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #252d3d;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #7c5cff;
+    transition: 0.3s;
+}
+
+.module {
+    background: #111827;
+    border: 1px solid #273044;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.module-header {
+    padding: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-header:hover {
+    background: #161e2d;
+}
+
+.module-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.lessons {
+    display: none;
+    border-top: 1px solid #273044;
+}
+
+.lesson {
+    padding: 18px 22px;
+    border-bottom: 1px solid #20293a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson:last-child {
+    border-bottom: none;
+}
+
+.lesson-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.lesson-info span {
+    color: #8f9bb0;
+    font-size: 14px;
+}
+
+.check {
+    background: #20293a;
+    color: #aaa;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.check.done {
+    background: #16a34a;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #273044;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #9ca8bd;
+    line-height: 1.5;
+}
+
+.final {
+    text-align: center;
+    background: linear-gradient(135deg, #17112e, #111827);
+    border-radius: 20px;
+    padding: 60px 20px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #778197;
+    border-top: 1px solid #273044;
+}
+
+@media (max-width: 800px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .lesson {
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚀 Site do Zero</div>
+
+    <nav>
+        <a href="#curso">Curso</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+
+        <h1>
+            Aprenda a criar seu
+            <span>primeiro site</span>
+            do zero
+        </h1>
+
+        <p>
+            Um curso passo a passo para você aprender HTML,
+            CSS e JavaScript e criar seu próprio site,
+            mesmo começando do zero.
+        </p>
+
+        <a href="#modulos" class="btn">
+            Começar o curso 🚀
+        </a>
+
+    </div>
+</section>
+
+<section id="curso">
+    <div class="container">
+
+        <h2 class="section-title">Seu progresso</h2>
+        <p class="section-subtitle">
+            Marque as aulas concluídas para acompanhar seu progresso.
+        </p>
+
+        <div class="progress-box">
+
+            <strong>
+                Progresso: <span id="progressText">0%</span>
+            </strong>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>HTML</h3>
+                <p>
+                    Aprenda a criar a estrutura das páginas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+                <p>
+                    Aprenda a deixar seu site bonito e responsivo.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>
+                    Adicione interatividade e funções ao seu site.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="modulos">
+
+<div class="container">
+
+<h2 class="section-title">Conteúdo do curso</h2>
+
+<p class="section-subtitle">
+Aprenda passo a passo.
+</p>
+
+
+<!-- MÓDULO 1 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+    <span class="module-title">
+        📚 Módulo 1 — Começando do zero
+    </span>
+    <span>▼</span>
+</div>
+
+<div class="lessons">
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 1 — O que é um site?</strong>
+<span>5 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 2 — HTML, CSS e JavaScript</strong>
+<span>8 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 3 — Preparando seu ambiente</strong>
+<span>10 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+</div>
+</div>
+
+
+<!-- MÓDULO 2 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+<span class="module-title">
+💻 Módulo 2 — Criando seu primeiro site
+</span>
+<span>▼</span>
+</div>
+
+<div class="lessons">
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 4 — Criando o HTML</strong>
+<span>12 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 5 — Textos, imagens e links</strong>
+<span>15 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+<div class="lesson">
+<div class="lesson-info">
+<strong>Aula 6 — Criando botões</strong>
+<span>10 minutos</span>
+</div>
+<button class="check" onclick="completeLesson(this)">Concluir</button>
+</div>
+
+</div>
+</div>
+
+
+<!-- MÓDULO 3 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+<span class="module-title">
+🎨 Módulo 3 — Deixando o site bonito
+</span>
+<span>▼</

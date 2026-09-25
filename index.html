@@ -4,526 +4,523 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SitePro Academy — Crie seu Site do Zero</title>
+<title>SitePro Academy — Curso de Criação de Sites</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0f19;
-    color: #ffffff;
-    line-height: 1.6;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080b12;
+    color:#fff;
+    line-height:1.6;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-.container {
-    width: 92%;
-    max-width: 1100px;
-    margin: auto;
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
 }
 
 /* NAVBAR */
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(11, 15, 25, 0.95);
-    border-bottom: 1px solid #252b3a;
-    backdrop-filter: blur(10px);
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(8,11,18,.96);
+    border-bottom:1px solid #252b3a;
+    backdrop-filter:blur(10px);
 }
 
-.nav-content {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.nav-content{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 800;
-    color: #ffffff;
+.logo{
+    font-size:20px;
+    font-weight:800;
 }
 
-.nav-links {
-    display: flex;
-    gap: 22px;
-    align-items: center;
+.nav-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.nav-links a {
-    color: #b9c0d0;
-    font-size: 14px;
+.nav-links a{
+    color:#aeb7ca;
+    font-size:14px;
 }
 
-.nav-links a:hover {
-    color: #ffffff;
+.nav-links a:hover{
+    color:#fff;
 }
 
 /* HERO */
 
-.hero {
-    padding: 90px 0 70px;
+.hero{
+    padding:90px 0 70px;
     background:
-        radial-gradient(circle at top right, #263a75 0%, transparent 35%),
-        radial-gradient(circle at bottom left, #17234a 0%, transparent 35%),
-        #0b0f19;
+    radial-gradient(circle at 90% 10%,#293c7a 0%,transparent 35%),
+    radial-gradient(circle at 10% 90%,#192750 0%,transparent 35%),
+    #080b12;
 }
 
-.hero-content {
-    max-width: 800px;
+.hero-content{
+    max-width:850px;
 }
 
-.badge {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 50px;
-    background: #171f35;
-    border: 1px solid #34436f;
-    color: #9fb4ff;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    margin-bottom:20px;
+    border-radius:50px;
+    background:#151d35;
+    border:1px solid #34436f;
+    color:#9db1ff;
+    font-size:13px;
+    font-weight:bold;
 }
 
-.hero h1 {
-    font-size: clamp(38px, 7vw, 70px);
-    line-height: 1.05;
-    margin-bottom: 22px;
+.hero h1{
+    font-size:clamp(40px,7vw,72px);
+    line-height:1.05;
+    margin-bottom:22px;
 }
 
-.hero h1 span {
-    color: #7c9cff;
+.hero h1 span{
+    color:#7189ff;
 }
 
-.hero p {
-    color: #aeb7ca;
-    font-size: 18px;
-    max-width: 700px;
-    margin-bottom: 30px;
+.hero p{
+    color:#aeb7ca;
+    font-size:18px;
+    max-width:720px;
+    margin-bottom:30px;
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 20px;
-    border-radius: 12px;
-    border: 1px solid #343d53;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
+.btn{
+    display:inline-block;
+    padding:14px 20px;
+    border-radius:12px;
+    border:1px solid #39435a;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+    text-align:center;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.btn-primary {
-    background: #617cff;
-    border-color: #617cff;
-    color: white;
+.btn-primary{
+    background:#617cff;
+    border-color:#617cff;
 }
 
-.btn-secondary {
-    background: #151b29;
-    color: white;
+.btn-secondary{
+    background:#151b29;
 }
 
-/* WHATSAPP */
-
-.whatsapp {
-    background: #25D366;
-    border-color: #25D366;
-    color: white;
+.whatsapp{
+    background:#20c968;
+    border-color:#20c968;
 }
 
-/* STATS */
+/* ESTATÍSTICAS */
 
-.stats {
-    padding: 30px 0;
+.stats{
+    padding:30px 0;
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
-.stat {
-    padding: 25px;
-    border: 1px solid #252d40;
-    border-radius: 16px;
-    background: #111725;
-    text-align: center;
+.stat{
+    background:#101622;
+    border:1px solid #252d40;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
 }
 
-.stat-icon {
-    font-size: 28px;
-    margin-bottom: 8px;
+.stat-icon{
+    font-size:28px;
+    margin-bottom:7px;
 }
 
-.stat strong {
-    display: block;
-    font-size: 22px;
+.stat strong{
+    display:block;
+    font-size:22px;
 }
 
-.stat span {
-    color: #8993a8;
-    font-size: 14px;
+.stat span{
+    color:#8993a8;
+    font-size:14px;
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 
-.section {
-    padding: 75px 0;
+.section{
+    padding:75px 0;
 }
 
-.section-title {
-    font-size: 35px;
-    margin-bottom: 10px;
+.section-title{
+    font-size:35px;
+    margin-bottom:8px;
 }
 
-.section-subtitle {
-    color: #929db2;
-    margin-bottom: 35px;
+.section-subtitle{
+    color:#8993a8;
+    margin-bottom:35px;
 }
 
-/* PROGRESS */
+/* PROGRESSO */
 
-.progress-box {
-    background: #111725;
-    border: 1px solid #252d40;
-    border-radius: 18px;
-    padding: 25px;
-    margin-bottom: 40px;
+.progress-box{
+    background:#101622;
+    border:1px solid #252d40;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:40px;
 }
 
-.progress-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 12px;
+.progress-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
 }
 
-.progress-header span {
-    color: #aeb7ca;
+.progress-header span{
+    color:#aeb7ca;
 }
 
-.progress-bar {
-    height: 12px;
-    background: #242b3b;
-    border-radius: 50px;
-    overflow: hidden;
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:#242b3b;
+    border-radius:50px;
+    overflow:hidden;
 }
 
-.progress-fill {
-    width: 0%;
-    height: 100%;
-    background: #617cff;
-    border-radius: 50px;
-    transition: width 0.4s ease;
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:#617cff;
+    border-radius:50px;
+    transition:.4s;
 }
 
-.progress-info {
-    color: #8993a8;
-    margin-top: 10px;
-    font-size: 14px;
+.progress-info{
+    color:#8993a8;
+    margin-top:10px;
+    font-size:14px;
 }
 
-/* MODULES */
+/* MÓDULOS */
 
-.module {
-    background: #111725;
-    border: 1px solid #252d40;
-    border-radius: 18px;
-    margin-bottom: 18px;
-    overflow: hidden;
+.module{
+    background:#101622;
+    border:1px solid #252d40;
+    border-radius:18px;
+    margin-bottom:18px;
+    overflow:hidden;
 }
 
-.module-header {
-    padding: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.module-header{
+    padding:24px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-.module-header:hover {
-    background: #151c2c;
+.module-header:hover{
+    background:#151c2a;
 }
 
-.module-number {
-    color: #7186ff;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.module-number{
+    color:#7189ff;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 
-.module-title {
-    font-size: 21px;
-    font-weight: bold;
+.module-title{
+    font-size:21px;
+    font-weight:bold;
 }
 
-.module-description {
-    color: #8993a8;
-    font-size: 14px;
-    margin-top: 5px;
+.module-description{
+    color:#8993a8;
+    font-size:14px;
+    margin-top:5px;
 }
 
-.arrow {
-    font-size: 22px;
-    transition: 0.2s;
+.arrow{
+    font-size:20px;
+    transition:.25s;
 }
 
-.module.open .arrow {
-    transform: rotate(180deg);
+.module.open .arrow{
+    transform:rotate(180deg);
 }
 
-.lessons {
-    display: none;
-    border-top: 1px solid #252d40;
+.lessons{
+    display:none;
+    border-top:1px solid #252d40;
 }
 
-.module.open .lessons {
-    display: block;
+.module.open .lessons{
+    display:block;
 }
 
-.lesson {
-    padding: 20px 24px;
-    border-bottom: 1px solid #202738;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.lesson{
+    padding:20px 24px;
+    border-bottom:1px solid #202738;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.lesson:last-child {
-    border-bottom: none;
+.lesson:last-child{
+    border-bottom:0;
 }
 
-.lesson-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.lesson-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.lesson-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 12px;
-    background: #1b2335;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
+.lesson-icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#1b2335;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    flex-shrink:0;
 }
 
-.lesson-name {
-    font-weight: bold;
+.lesson-name{
+    font-weight:bold;
 }
 
-.lesson-info {
-    color: #7f899d;
-    font-size: 13px;
+.lesson-info{
+    color:#7f899d;
+    font-size:13px;
 }
 
-.complete-btn {
-    border: 1px solid #39445c;
-    background: #171e2d;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    white-space: nowrap;
+.complete-btn{
+    background:#171e2d;
+    color:#fff;
+    border:1px solid #39445c;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
-.complete-btn:hover {
-    background: #222c42;
+.complete-btn:hover{
+    background:#26324a;
 }
 
-.complete-btn.done {
-    background: #1c7a4d;
-    border-color: #1c7a4d;
+.complete-btn.done{
+    background:#198754;
+    border-color:#198754;
 }
 
-/* CARDS */
+/* MATERIAIS */
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
-.card {
-    background: #111725;
-    border: 1px solid #252d40;
-    border-radius: 18px;
-    padding: 25px;
+.card{
+    background:#101622;
+    border:1px solid #252d40;
+    border-radius:18px;
+    padding:25px;
 }
 
-.card-icon {
-    font-size: 30px;
-    margin-bottom: 12px;
+.card-icon{
+    font-size:30px;
+    margin-bottom:12px;
 }
 
-.card h3 {
-    margin-bottom: 8px;
+.card h3{
+    margin-bottom:8px;
 }
 
-.card p {
-    color: #8993a8;
-    font-size: 14px;
+.card p{
+    color:#8993a8;
+    font-size:14px;
 }
 
 /* CTA */
 
-.cta {
-    padding: 55px;
-    border-radius: 22px;
+.cta{
+    padding:55px;
+    border-radius:22px;
+    text-align:center;
     background:
-        radial-gradient(circle at top right, #344a91, transparent 40%),
-        #151e34;
-    border: 1px solid #334267;
-    text-align: center;
+    radial-gradient(circle at top right,#344a91,transparent 40%),
+    #151e34;
+    border:1px solid #334267;
 }
 
-.cta h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
+.cta h2{
+    font-size:32px;
+    margin-bottom:10px;
 }
 
-.cta p {
-    color: #aeb7ca;
-    margin-bottom: 25px;
+.cta p{
+    color:#aeb7ca;
+    margin-bottom:25px;
 }
 
 /* TOAST */
 
-.toast {
-    position: fixed;
-    left: 50%;
-    bottom: 25px;
-    transform: translate(-50%, 100px);
-    background: #202a3e;
-    border: 1px solid #3a4865;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 12px;
-    z-index: 9999;
-    opacity: 0;
-    transition: 0.3s;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:25px;
+    transform:translate(-50%,120px);
+    opacity:0;
+    background:#202a3e;
+    border:1px solid #3a4865;
+    padding:14px 20px;
+    border-radius:12px;
+    z-index:9999;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    text-align:center;
+    width:max-content;
+    max-width:90%;
 }
 
-.toast.show {
-    transform: translate(-50%, 0);
-    opacity: 1;
+.toast.show{
+    transform:translate(-50%,0);
+    opacity:1;
 }
 
-/* FOOTER */
+/* RODAPÉ */
 
-footer {
-    border-top: 1px solid #252d40;
-    padding: 35px 0;
-    color: #727d92;
-    text-align: center;
-    font-size: 14px;
+footer{
+    border-top:1px solid #252d40;
+    padding:35px 0;
+    color:#727d92;
+    text-align:center;
+    font-size:14px;
 }
 
-/* MOBILE */
+/* CELULAR */
 
-@media (max-width: 800px) {
+@media(max-width:800px){
 
-    .nav-content {
-        flex-direction: column;
-        padding: 15px 0;
+    .nav-content{
+        flex-direction:column;
+        padding:15px 0;
     }
 
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 14px;
+    .nav-links{
+        justify-content:center;
     }
 
-    .hero {
-        padding: 60px 0;
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .cards{
+        grid-template-columns:1fr;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
+    .hero{
+        padding:65px 0;
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width:600px){
 
-    .hero h1 {
-        font-size: 40px;
+    .hero h1{
+        font-size:40px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .hero p{
+        font-size:16px;
     }
 
-    .buttons {
-        flex-direction: column;
+    .buttons{
+        flex-direction:column;
     }
 
-    .buttons .btn {
-        width: 100%;
-        text-align: center;
+    .buttons .btn{
+        width:100%;
     }
 
-    .section {
-        padding: 55px 0;
+    .section{
+        padding:55px 0;
     }
 
-    .section-title {
-        font-size: 29px;
+    .section-title{
+        font-size:29px;
     }
 
-    .lesson {
-        align-items: flex-start;
-        flex-direction: column;
+    .lesson{
+        flex-direction:column;
+        align-items:flex-start;
     }
 
-    .complete-btn {
-        width: 100%;
+    .complete-btn{
+        width:100%;
     }
 
-    .cta {
-        padding: 30px 20px;
+    .cta{
+        padding:30px 20px;
     }
 
-    .cta h2 {
-        font-size: 26px;
+    .cta h2{
+        font-size:26px;
+    }
+
+    .nav-links{
+        gap:12px;
     }
 }
 </style>
@@ -534,20 +531,22 @@ footer {
 <!-- NAVBAR -->
 
 <header class="navbar">
-    <div class="container nav-content">
 
-        <a href="#inicio" class="logo">
-            🚀 SitePro Academy
-        </a>
+<div class="container nav-content">
 
-        <nav class="nav-links">
-            <a href="#inicio">Início</a>
-            <a href="#curso">Curso</a>
-            <a href="#materiais">Materiais</a>
-            <a href="#certificado">Certificado</a>
-        </nav>
+<a href="#inicio" class="logo">
+🚀 SitePro Academy
+</a>
 
-    </div>
+<nav class="nav-links">
+<a href="#inicio">Início</a>
+<a href="#curso">Curso</a>
+<a href="#materiais">Materiais</a>
+<a href="#certificado">Certificado</a>
+</nav>
+
+</div>
+
 </header>
 
 
@@ -555,81 +554,80 @@ footer {
 
 <section class="hero" id="inicio">
 
-    <div class="container hero-content">
+<div class="container hero-content">
 
-        <div class="badge">
-            🎓 CURSO COMPLETO
-        </div>
+<div class="badge">
+🎓 CURSO COMPLETO
+</div>
 
-        <h1>
-            Crie seu primeiro
-            <span>site profissional</span>
-            do zero.
-        </h1>
+<h1>
+Crie seu primeiro
+<span>site profissional</span>
+do zero.
+</h1>
 
-        <p>
-            Aprenda HTML, CSS e JavaScript de forma simples,
-            prática e passo a passo. No final, você terá seu
-            próprio projeto publicado na internet.
-        </p>
+<p>
+Aprenda HTML, CSS e JavaScript de forma simples,
+prática e passo a passo. No final, você terá seu
+próprio projeto publicado na internet.
+</p>
 
-        <div class="buttons">
+<div class="buttons">
 
-            <a href="#curso" class="btn btn-primary">
-                Começar agora 🚀
-            </a>
+<a href="#curso" class="btn btn-primary">
+Começar agora 🚀
+</a>
 
-            <a href="#materiais" class="btn btn-secondary">
-                Ver materiais
-            </a>
+<a href="#materiais" class="btn btn-secondary">
+Ver materiais
+</a>
 
-            <a
-                href="https://wa.me/5548988473049?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20curso."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn whatsapp"
-            >
-                💬 Falar comigo no WhatsApp
-            </a>
+<a
+href="https://wa.me/5548988473049?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20curso."
+target="_blank"
+rel="noopener noreferrer"
+class="btn whatsapp">
+💬 Falar comigo no WhatsApp
+</a>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- STATS -->
+<!-- ESTATÍSTICAS -->
 
 <section class="stats">
 
-    <div class="container stats-grid">
+<div class="container stats-grid">
 
-        <div class="stat">
-            <div class="stat-icon">📚</div>
-            <strong>6</strong>
-            <span>Módulos</span>
-        </div>
+<div class="stat">
+<div class="stat-icon">📚</div>
+<strong>6</strong>
+<span>Módulos</span>
+</div>
 
-        <div class="stat">
-            <div class="stat-icon">🎬</div>
-            <strong>18</strong>
-            <span>Aulas</span>
-        </div>
+<div class="stat">
+<div class="stat-icon">🎬</div>
+<strong>18</strong>
+<span>Aulas</span>
+</div>
 
-        <div class="stat">
-            <div class="stat-icon">💻</div>
-            <strong>1</strong>
-            <span>Projeto final</span>
-        </div>
+<div class="stat">
+<div class="stat-icon">💻</div>
+<strong>1</strong>
+<span>Projeto final</span>
+</div>
 
-        <div class="stat">
-            <div class="stat-icon">🏆</div>
-            <strong>100%</strong>
-            <span>Prático</span>
-        </div>
+<div class="stat">
+<div class="stat-icon">🏆</div>
+<strong>100%</strong>
+<span>Prático</span>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -638,650 +636,713 @@ footer {
 
 <section class="section" id="curso">
 
-    <div class="container">
+<div class="container">
 
-        <h2 class="section-title">
-            Seu aprendizado
-        </h2>
+<h2 class="section-title">
+Seu aprendizado
+</h2>
 
-        <p class="section-subtitle">
-            Acompanhe seu progresso durante o curso.
-        </p>
+<p class="section-subtitle">
+Acompanhe seu progresso durante o curso.
+</p>
 
 
-        <!-- PROGRESSO -->
+<div class="progress-box">
 
-        <div class="progress-box">
+<div class="progress-header">
+<strong>Progresso do curso</strong>
+<span id="progressText">0%</span>
+</div>
 
-            <div class="progress-header">
-                <strong>Progresso do curso</strong>
-                <span id="progressText">0%</span>
-            </div>
+<div class="progress-bar">
+<div class="progress-fill" id="progressFill"></div>
+</div>
 
-            <div class="progress-bar">
-                <div
-                    class="progress-fill"
-                    id="progressFill"
-                ></div>
-            </div>
+<div class="progress-info">
+<span id="completedText">0</span> de 18 aulas concluídas
+</div>
 
-            <div class="progress-info">
-                <span id="completedText">0</span>
-                de 18 aulas concluídas
-            </div>
+</div>
 
-        </div>
 
+<h2 class="section-title">
+Módulos do curso
+</h2>
 
-        <h2 class="section-title">
-            Módulos do curso
-        </h2>
+<p class="section-subtitle">
+Clique em um módulo para ver as aulas.
+</p>
 
-        <p class="section-subtitle">
-            Escolha uma aula para começar seus estudos.
-        </p>
 
+<!-- MÓDULO 1 -->
 
-        <!-- MÓDULO 1 -->
+<div class="module">
 
-        <div class="module">
+<div class="module-header" onclick="toggleModule(this)">
 
-            <div
-                class="module-header"
-                onclick="toggleModule(this)"
-            >
+<div>
 
-                <div>
-                    <div class="module-number">MÓDULO 01</div>
+<div class="module-number">
+MÓDULO 01
+</div>
 
-                    <div class="module-title">
-                        Começando do zero
-                    </div>
+<div class="module-title">
+Começando do zero
+</div>
 
-                    <div class="module-description">
-                        Conheça as ferramentas e conceitos básicos.
-                    </div>
-                </div>
+<div class="module-description">
+Conheça as ferramentas e conceitos básicos.
+</div>
 
-                <div class="arrow">▼</div>
+</div>
 
-            </div>
+<div class="arrow">
+▼
+</div>
 
-            <div class="lessons">
+</div>
 
-                <div class="lesson">
 
-                    <div class="lesson-left">
+<div class="lessons">
 
-                        <div class="lesson-icon">🎯</div>
+<div class="lesson">
 
-                        <div>
-                            <div class="lesson-name">
-                                O que é um site?
-                            </div>
+<div class="lesson-left">
 
-                            <div class="lesson-info">
-                                5 min • Introdução
-                            </div>
-                        </div>
+<div class="lesson-icon">
+🎯
+</div>
 
-                    </div>
+<div>
+<div class="lesson-name">
+O que é um site?
+</div>
 
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'O que é um site?')"
-                    >
-                        Concluir
-                    </button>
+<div class="lesson-info">
+5 min • Introdução
+</div>
+</div>
 
-                </div>
+</div>
 
+<button class="complete-btn"
+onclick="completeLesson(this)">
+Concluir
+</button>
 
-                <div class="lesson">
+</div>
 
-                    <div class="lesson-left">
 
-                        <div class="lesson-icon">💻</div>
+<div class="lesson">
 
-                        <div>
-                            <div class="lesson-name">
-                                HTML, CSS e JavaScript
-                            </div>
+<div class="lesson-left">
 
-                            <div class="lesson-info">
-                                8 min • Fundamentos
-                            </div>
-                        </div>
+<div class="lesson-icon">
+💻
+</div>
 
-                    </div>
+<div>
+<div class="lesson-name">
+HTML, CSS e JavaScript
+</div>
 
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'HTML, CSS e JavaScript')"
-                    >
-                        Concluir
-                    </button>
+<div class="lesson-info">
+8 min • Fundamentos
+</div>
+</div>
 
-                </div>
+</div>
 
+<button class="complete-btn"
+onclick="completeLesson(this)">
+Concluir
+</button>
 
-                <div class="lesson">
+</div>
 
-                    <div class="lesson-left">
 
-                        <div class="lesson-icon">🛠️</div>
+<div class="lesson">
 
-                        <div>
-                            <div class="lesson-name">
-                                Preparando seu ambiente
-                            </div>
+<div class="lesson-left">
 
-                            <div class="lesson-info">
-                                10 min • Configuração
-                            </div>
-                        </div>
-
-                    </div>
+<div class="lesson-icon">
+🛠️
+</div>
 
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Preparando seu ambiente')"
-                    >
-                        Concluir
-                    </button>
-
-                </div>
-
-            </div>
+<div>
+<div class="lesson-name">
+Preparando seu ambiente
+</div>
 
-        </div>
+<div class="lesson-info">
+10 min • Configuração
+</div>
+</div>
 
+</div>
 
-        <!-- MÓDULO 2 -->
+<button class="complete-btn"
+onclick="completeLesson(this)">
+Concluir
+</button>
 
-        <div class="module">
+</div>
 
-            <div
-                class="module-header"
-                onclick="toggleModule(this)"
-            >
+</div>
 
-                <div>
-                    <div class="module-number">MÓDULO 02</div>
+</div>
 
-                    <div class="module-title">
-                        HTML na prática
-                    </div>
 
-                    <div class="module-description">
-                        Construa a estrutura da sua página.
-                    </div>
-                </div>
+<!-- MÓDULO 2 -->
 
-                <div class="arrow">▼</div>
+<div class="module">
 
-            </div>
+<div class="module-header" onclick="toggleModule(this)">
 
-            <div class="lessons">
+<div>
 
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">📄</div>
-                        <div>
-                            <div class="lesson-name">
-                                Criando seu primeiro HTML
-                            </div>
-                            <div class="lesson-info">
-                                12 min • Prática
-                            </div>
-                        </div>
-                    </div>
+<div class="module-number">
+MÓDULO 02
+</div>
 
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Criando seu primeiro HTML')"
-                    >
-                        Concluir
-                    </button>
-                </div>
+<div class="module-title">
+HTML na prática
+</div>
 
+<div class="module-description">
+Construa a estrutura da sua página.
+</div>
 
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🖼️</div>
-                        <div>
-                            <div class="lesson-name">
-                                Textos, imagens e links
-                            </div>
-                            <div class="lesson-info">
-                                15 min • Prática
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Textos, imagens e links')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🔘</div>
-                        <div>
-                            <div class="lesson-name">
-                                Criando botões
-                            </div>
-                            <div class="lesson-info">
-                                10 min • Prática
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Criando botões')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- MÓDULO 3 -->
-
-        <div class="module">
-
-            <div
-                class="module-header"
-                onclick="toggleModule(this)"
-            >
-
-                <div>
-                    <div class="module-number">MÓDULO 03</div>
-
-                    <div class="module-title">
-                        CSS — Deixando bonito
-                    </div>
-
-                    <div class="module-description">
-                        Aprenda cores, fontes, layouts e responsividade.
-                    </div>
-                </div>
-
-                <div class="arrow">▼</div>
-
-            </div>
-
-            <div class="lessons">
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🎨</div>
-                        <div>
-                            <div class="lesson-name">
-                                Conhecendo o CSS
-                            </div>
-                            <div class="lesson-info">
-                                12 min • CSS
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Conhecendo o CSS')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🌈</div>
-                        <div>
-                            <div class="lesson-name">
-                                Cores, fontes e espaçamento
-                            </div>
-                            <div class="lesson-info">
-                                14 min • CSS
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Cores, fontes e espaçamento')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">📱</div>
-                        <div>
-                            <div class="lesson-name">
-                                Site adaptado para celular
-                            </div>
-                            <div class="lesson-info">
-                                15 min • Responsividade
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Site adaptado para celular')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- MÓDULO 4 -->
-
-        <div class="module">
-
-            <div
-                class="module-header"
-                onclick="toggleModule(this)"
-            >
-
-                <div>
-                    <div class="module-number">MÓDULO 04</div>
-
-                    <div class="module-title">
-                        JavaScript
-                    </div>
-
-                    <div class="module-description">
-                        Adicione interatividade ao seu site.
-                    </div>
-                </div>
-
-                <div class="arrow">▼</div>
-
-            </div>
-
-            <div class="lessons">
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">⚡</div>
-                        <div>
-                            <div class="lesson-name">
-                                Conhecendo JavaScript
-                            </div>
-                            <div class="lesson-info">
-                                12 min • JavaScript
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Conhecendo JavaScript')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🖱️</div>
-                        <div>
-                            <div class="lesson-name">
-                                Botões e eventos
-                            </div>
-                            <div class="lesson-info">
-                                14 min • JavaScript
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Botões e eventos')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🧠</div>
-                        <div>
-                            <div class="lesson-name">
-                                Funções básicas
-                            </div>
-                            <div class="lesson-info">
-                                15 min • JavaScript
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Funções básicas')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- MÓDULO 5 -->
-
-        <div class="module">
-
-            <div
-                class="module-header"
-                onclick="toggleModule(this)"
-            >
-
-                <div>
-                    <div class="module-number">MÓDULO 05</div>
-
-                    <div class="module-title">
-                        Publicando seu site
-                    </div>
-
-                    <div class="module-description">
-                        Coloque seu projeto na internet.
-                    </div>
-                </div>
-
-                <div class="arrow">▼</div>
-
-            </div>
-
-            <div class="lessons">
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">📁</div>
-                        <div>
-                            <div class="lesson-name">
-                                Organizando os arquivos
-                            </div>
-                            <div class="lesson-info">
-                                10 min • Publicação
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Organizando os arquivos')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🌐</div>
-                        <div>
-                            <div class="lesson-name">
-                                Criando seu repositório
-                            </div>
-                            <div class="lesson-info">
-                                12 min • GitHub
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Criando seu repositório')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🚀</div>
-                        <div>
-                            <div class="lesson-name">
-                                Publicando no GitHub Pages
-                            </div>
-                            <div class="lesson-info">
-                                15 min • Publicação
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Publicando no GitHub Pages')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- MÓDULO 6 -->
-
-        <div class="module">
-
-            <div
-                class="module-header"
-                onclick="toggleModule(this)"
-            >
-
-                <div>
-                    <div class="module-number">MÓDULO 06</div>
-
-                    <div class="module-title">
-                        Projeto final
-                    </div>
-
-                    <div class="module-description">
-                        Coloque tudo o que aprendeu em prática.
-                    </div>
-                </div>
-
-                <div class="arrow">▼</div>
-
-            </div>
-
-            <div class="lessons">
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">💡</div>
-                        <div>
-                            <div class="lesson-name">
-                                Planejando seu projeto
-                            </div>
-                            <div class="lesson-info">
-                                10 min • Projeto
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Planejando seu projeto')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">💻</div>
-                        <div>
-                            <div class="lesson-name">
-                                Construindo seu projeto
-                            </div>
-                            <div class="lesson-info">
-                                20 min • Projeto
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Construindo seu projeto')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-
-                <div class="lesson">
-                    <div class="lesson-left">
-                        <div class="lesson-icon">🏆</div>
-                        <div>
-                            <div class="lesson-name">
-                                Finalizando e publicando
-                            </div>
-                            <div class="lesson-info">
-                                15 min • Projeto final
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="complete-btn"
-                        onclick="completeLesson(this,'Finalizando e publicando')"
-                    >
-                        Concluir
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+
+<div class="lessons">
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">📄</div>
+
+<div>
+<div class="lesson-name">
+Criando seu primeiro HTML
+</div>
+
+<div class="lesson-info">
+12 min • Prática
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🖼️</div>
+
+<div>
+<div class="lesson-name">
+Textos, imagens e links
+</div>
+
+<div class="lesson-info">
+15 min • Prática
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🔘</div>
+
+<div>
+<div class="lesson-name">
+Criando botões
+</div>
+
+<div class="lesson-info">
+10 min • Prática
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MÓDULO 3 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+
+<div>
+
+<div class="module-number">
+MÓDULO 03
+</div>
+
+<div class="module-title">
+CSS — Deixando bonito
+</div>
+
+<div class="module-description">
+Aprenda cores, fontes, layouts e responsividade.
+</div>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+
+<div class="lessons">
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🎨</div>
+
+<div>
+<div class="lesson-name">
+Conhecendo o CSS
+</div>
+
+<div class="lesson-info">
+12 min • CSS
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🌈</div>
+
+<div>
+<div class="lesson-name">
+Cores, fontes e espaçamento
+</div>
+
+<div class="lesson-info">
+14 min • CSS
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">📱</div>
+
+<div>
+<div class="lesson-name">
+Site adaptado para celular
+</div>
+
+<div class="lesson-info">
+15 min • Responsividade
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MÓDULO 4 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+
+<div>
+
+<div class="module-number">
+MÓDULO 04
+</div>
+
+<div class="module-title">
+JavaScript
+</div>
+
+<div class="module-description">
+Adicione interatividade ao seu site.
+</div>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+
+<div class="lessons">
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">⚡</div>
+
+<div>
+<div class="lesson-name">
+Conhecendo JavaScript
+</div>
+
+<div class="lesson-info">
+12 min • JavaScript
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🖱️</div>
+
+<div>
+<div class="lesson-name">
+Botões e eventos
+</div>
+
+<div class="lesson-info">
+14 min • JavaScript
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🧠</div>
+
+<div>
+<div class="lesson-name">
+Funções básicas
+</div>
+
+<div class="lesson-info">
+15 min • JavaScript
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MÓDULO 5 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+
+<div>
+
+<div class="module-number">
+MÓDULO 05
+</div>
+
+<div class="module-title">
+Publicando seu site
+</div>
+
+<div class="module-description">
+Coloque seu projeto na internet.
+</div>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+
+<div class="lessons">
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">📁</div>
+
+<div>
+<div class="lesson-name">
+Organizando os arquivos
+</div>
+
+<div class="lesson-info">
+10 min • Publicação
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🌐</div>
+
+<div>
+<div class="lesson-name">
+Criando seu repositório
+</div>
+
+<div class="lesson-info">
+12 min • GitHub
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🚀</div>
+
+<div>
+<div class="lesson-name">
+Publicando no GitHub Pages
+</div>
+
+<div class="lesson-info">
+15 min • Publicação
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MÓDULO 6 -->
+
+<div class="module">
+
+<div class="module-header" onclick="toggleModule(this)">
+
+<div>
+
+<div class="module-number">
+MÓDULO 06
+</div>
+
+<div class="module-title">
+Projeto final
+</div>
+
+<div class="module-description">
+Coloque tudo o que aprendeu em prática.
+</div>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+
+<div class="lessons">
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">💡</div>
+
+<div>
+<div class="lesson-name">
+Planejando seu projeto
+</div>
+
+<div class="lesson-info">
+10 min • Projeto
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">💻</div>
+
+<div>
+<div class="lesson-name">
+Construindo seu projeto
+</div>
+
+<div class="lesson-info">
+20 min • Projeto
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+
+<div class="lesson">
+
+<div class="lesson-left">
+
+<div class="lesson-icon">🏆</div>
+
+<div>
+<div class="lesson-name">
+Finalizando e publicando
+</div>
+
+<div class="lesson-info">
+15 min • Projeto final
+</div>
+</div>
+
+</div>
+
+<button class="complete-btn" onclick="completeLesson(this)">
+Concluir
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1290,48 +1351,71 @@ footer {
 
 <section class="section" id="materiais">
 
-    <div class="container">
+<div class="container">
 
-        <h2 class="section-title">
-            📚 Materiais
-        </h2>
+<h2 class="section-title">
+📚 Materiais
+</h2>
 
-        <p class="section-subtitle">
-            Recursos para ajudar você durante o curso.
-        </p>
+<p class="section-subtitle">
+Recursos para ajudar você durante o curso.
+</p>
 
-        <div class="cards">
+<div class="cards">
 
-            <div class="card">
-                <div class="card-icon">📄</div>
-                <h3>Guia HTML</h3>
-                <p>
-                    Material de apoio para aprender a estrutura
-                    básica de uma página.
-                </p>
-            </div>
+<div class="card">
 
-            <div class="card">
-                <div class="card-icon">🎨</div>
-                <h3>Guia CSS</h3>
-                <p>
-                    Aprenda a personalizar cores, fontes,
-                    espaçamentos e layouts.
-                </p>
-            </div>
+<div class="card-icon">
+📄
+</div>
 
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Guia JavaScript</h3>
-                <p>
-                    Entenda como adicionar interatividade
-                    aos seus projetos.
-                </p>
-            </div>
+<h3>
+Guia HTML
+</h3>
 
-        </div>
+<p>
+Material de apoio para aprender a estrutura básica de uma página.
+</p>
 
-    </div>
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🎨
+</div>
+
+<h3>
+Guia CSS
+</h3>
+
+<p>
+Aprenda a personalizar cores, fontes, espaçamentos e layouts.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+⚡
+</div>
+
+<h3>
+Guia JavaScript
+</h3>
+
+<p>
+Entenda como adicionar interatividade aos seus projetos.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1340,29 +1424,27 @@ footer {
 
 <section class="section" id="certificado">
 
-    <div class="container">
+<div class="container">
 
-        <div class="cta">
+<div class="cta">
 
-            <h2>
-                🏆 Certificado
-            </h2>
+<h2>
+🏆 Certificado
+</h2>
 
-            <p>
-                Conclua todas as 18 aulas para liberar
-                seu certificado de conclusão.
-            </p>
+<p>
+Conclua todas as 18 aulas para liberar seu certificado de conclusão.
+</p>
 
-            <button
-                class="btn btn-primary"
-                onclick="certificateMessage()"
-            >
-                Ver certificado
-            </button>
+<button
+class="btn btn-primary"
+onclick="certificateMessage()">
+Ver certificado
+</button>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -1371,59 +1453,212 @@ footer {
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="cta">
+<div class="cta">
 
-            <h2>
-                💬 Precisa de ajuda?
-            </h2>
+<h2>
+💬 Precisa de ajuda?
+</h2>
 
-            <p>
-                Entre em contato comigo pelo WhatsApp.
-            </p>
+<p>
+Entre em contato comigo pelo WhatsApp.
+</p>
 
-            <a
-                href="https://wa.me/5548988473049?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20curso."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn whatsapp"
-            >
-                Falar comigo no WhatsApp
-            </a>
+<a
+href="https://wa.me/5548988473049?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20curso."
+target="_blank"
+rel="noopener noreferrer"
+class="btn whatsapp">
 
-        </div>
+Falar comigo no WhatsApp
 
-    </div>
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- RODAPÉ -->
 
 <footer>
 
-    <div class="container">
+<div class="container">
 
-        🚀 SitePro Academy
+🚀 SitePro Academy
 
-        <br>
+<br>
 
-        Curso prático de criação de sites.
+Curso prático de criação de sites.
 
-    </div>
+</div>
 
 </footer>
 
 
-<!-- MENSAGEM -->
-
-<div class="toast"></div>
+<div class="toast" id="toast"></div>
 
 
-<!-- JAVASCRIPT EXTERNO -->
+<!-- JAVASCRIPT -->
 
-<script src="script.js"></script>
+<script>
+
+const TOTAL_AULAS = 18;
+
+let aulasConcluidas =
+JSON.parse(localStorage.getItem("sitepro_aulas") || "[]");
+
+
+function toggleModule(header){
+
+    const module = header.parentElement;
+
+    module.classList.toggle("open");
+
+}
+
+
+function showToast(message){
+
+    const toast =
+    document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },3000);
+
+}
+
+
+function completeLesson(button){
+
+    const lesson =
+    button.closest(".lesson");
+
+    const nome =
+    lesson.querySelector(".lesson-name").textContent.trim();
+
+    const index =
+    Array.from(document.querySelectorAll(".lesson"))
+    .indexOf(lesson);
+
+
+    if(aulasConcluidas.includes(index)){
+
+        aulasConcluidas =
+        aulasConcluidas.filter(item => item !== index);
+
+        button.textContent = "Concluir";
+
+        button.classList.remove("done");
+
+        showToast("Aula marcada como não concluída.");
+
+    }else{
+
+        aulasConcluidas.push(index);
+
+        button.textContent = "✓ Concluída";
+
+        button.classList.add("done");
+
+        showToast("Aula concluída: " + nome);
+
+    }
+
+
+    localStorage.setItem(
+        "sitepro_aulas",
+        JSON.stringify(aulasConcluidas)
+    );
+
+    updateProgress();
+
+}
+
+
+function updateProgress(){
+
+    const quantidade =
+    aulasConcluidas.length;
+
+    const porcentagem =
+    Math.round((quantidade / TOTAL_AULAS) * 100);
+
+
+    document.getElementById("progressFill")
+    .style.width = porcentagem + "%";
+
+
+    document.getElementById("progressText")
+    .textContent = porcentagem + "%";
+
+
+    document.getElementById("completedText")
+    .textContent = quantidade;
+
+
+    const buttons =
+    document.querySelectorAll(".complete-btn");
+
+
+    buttons.forEach(function(button,index){
+
+        if(aulasConcluidas.includes(index)){
+
+            button.textContent = "✓ Concluída";
+
+            button.classList.add("done");
+
+        }else{
+
+            button.textContent = "Concluir";
+
+            button.classList.remove("done");
+
+        }
+
+    });
+
+}
+
+
+function certificateMessage(){
+
+    if(aulasConcluidas.length < TOTAL_AULAS){
+
+        const faltam =
+        TOTAL_AULAS - aulasConcluidas.length;
+
+        showToast(
+            "Você ainda precisa concluir " +
+            faltam +
+            " aula(s)."
+        );
+
+        return;
+
+    }
+
+    showToast(
+        "🎉 Parabéns! Você concluiu o curso!"
+    );
+
+}
+
+
+updateProgress();
+
+</script>
 
 </body>
-                    </html>
+    </html>
